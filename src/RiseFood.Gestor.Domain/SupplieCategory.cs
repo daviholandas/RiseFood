@@ -17,5 +17,10 @@ namespace RiseFood.Gestor.Domain
         //EF Relation
         public IEnumerable<Supplie> Supplies {get; }
 
+        public override string  ToString()
+        {
+            return $"{CategoryName}";
+        }
+
     }
 }
