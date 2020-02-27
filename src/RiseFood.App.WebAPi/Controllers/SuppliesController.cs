@@ -20,7 +20,21 @@ namespace RiseFood.App.WebApi.Controllers
         [HttpGet]
         public async  Task<IEnumerable<SupplieDto>> GetAll()
         {
-            return await _supplieService.GetAllSupplies();
+           return await _supplieService.GetAllSupplies();
+        }
+
+        [HttpGet]
+        [Route("categories")]
+        public async Task<IEnumerable<SupplieCategoryDto>> GetAllCategories()
+        {
+            return await _supplieService.GetAllCatagories();
+        }
+
+        [HttpGet]
+        [Route("categories/{categoryCode=string}")]
+        public async Task<IEnumerable<SupplieDto>> GetSuppliesByCategories(string categoryCode)
+        {
+            return await _supplieService.GetSuppliesByCategory(categoryCode);
         }
     }
 }

@@ -13,7 +13,5 @@ namespace RiseFood.Gestor.Application.DTOs
         public string SupplieName { get; set; }
         public decimal Price { get; set; }
         public string SupplieCategory { get; set; }
-        [JsonIgnore]
-        public string SupplieCategoryCode {get; set;}
     }
 }

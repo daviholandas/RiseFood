@@ -11,11 +11,11 @@ namespace RiseFood.Gestor.Domain
             CategoryName = categoryName;
         }
 
-        public string Code { get; }
-        public string CategoryName { get; }
+        public string Code { get; private set; }
+        public string CategoryName { get; private set; }
 
         //EF Relation
-        public IEnumerable<Supplie> Supplies {get; }
+        public IEnumerable<Supplie> Supplies { get; private set; }
 
         public override string  ToString()
         {

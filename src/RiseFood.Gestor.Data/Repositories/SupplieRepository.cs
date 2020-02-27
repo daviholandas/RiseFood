@@ -27,7 +27,7 @@ namespace RiseFood.Gestor.Data.Repositories
 
         public async Task<IEnumerable<Supplie>> GetAllSupplies()
         {
-            return await _gestorDbContext.Supplies.AsNoTracking().ToListAsync();
+            return await _gestorDbContext.Supplies.AsNoTracking().Include(s => s.SupplieCategory).ToListAsync();
         }
 
         public async Task<Supplie> GetSupplieByCode(string code)

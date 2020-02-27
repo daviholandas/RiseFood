@@ -1,8 +1,9 @@
 using System;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RiseFood.Gestor.Data;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace RiseFood.App.WebAPi.Setup
 {
@@ -12,7 +13,6 @@ namespace RiseFood.App.WebAPi.Setup
         {
             //Gestor Context
             services.AddDbContext<GestorDbContext>(options => options.UseMySql(configuration.GetConnectionString("GestorDbConnection")));
-
             return services;
         }
     }

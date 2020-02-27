@@ -11,14 +11,17 @@ namespace RiseFood.Gestor.Data
     {
         public GestorDbContext(DbContextOptions<GestorDbContext> options) : base(options) {}
         
-        public DbSet<Supplie> Supplies {get;}
-        public DbSet<SupplieCategory> SupplieCategories {get;}
+        public DbSet<Supplie> Supplies { get; set; }
+        public DbSet<SupplieCategory> SupplieCategories { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(GestorDbContext).Assembly);
+
         }
+
         public async  Task<bool> Commit()
         {
             return await base.SaveChangesAsync() > 0;
