@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RiseFood.Gestor.Application\RiseFood.Gestor.Application.csproj" />
+    <ProjectReference Include="..\RiseFood.Gestor.Data\RiseFood.Gestor.Data.csproj" />
+    <ProjectReference Include="..\RiseFood.Gestor.Domain\RiseFood.Gestor.Domain.csproj" />
+    <ProjectReference Include="..\RiseFood.Core\RiseFood.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+</Project>
