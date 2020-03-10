@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/RiseFood.App.WebAPi/bin/Debug/netcoreapp3.1/RiseFood.App.WebAPi.dll",
+            "program": "${workspaceFolder}/src/RiseFood.App.WebApi/bin/Debug/netcoreapp3.1/RiseFood.App.WebApi.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src/RiseFood.App.WebAPi",
             "stopAtEntry": false,
