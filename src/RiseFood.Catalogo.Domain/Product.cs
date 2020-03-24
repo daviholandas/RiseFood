@@ -9,23 +9,25 @@ namespace RiseFood.Catalogo.Domain
     public class Product : Entity, IAggregateRoot
     {
         private Product(){}
-        public Product(string productName, decimal price, string description, HashSet<string> ingredientsAdditionals, Sizes? size, Guid categoryId)
+        public Product(string name, decimal price, string description, HashSet<string> ingredientsAdditionals, Sizes? size, Guid categoryId)
         {
-            ProductName = productName;
+            Name = name;
             Price = price;
             Description = description;
-            IngredientsAdditionals = ingredientsAdditionals ?? new HashSet<string>();
+            _ingredientsAdditionals = ingredientsAdditionals ?? new HashSet<string>();
             Size = size ?? Sizes.Standard;
             CategoryId = categoryId;
             
             Validate();
         }
 
-        public string ProductName {get; private set;}
+        private readonly HashSet<string> _ingredientsAdditionals;
+
+        public string Name {get; private set;}
         public decimal Price {get; private set;}
         public Category Category {get; private set;}
         public string Description {get; private set;}
-        public HashSet<string> IngredientsAdditionals {get; private set;}
+        public IReadOnlyCollection<string> IngredientsAdditionals => _ingredientsAdditionals;
         public Sizes Size {get; private set;}
 
         //EF Relations
@@ -34,7 +36,7 @@ namespace RiseFood.Catalogo.Domain
 
         public override void Validate()
         {
-            Validations.ValidateIfEmpty(ProductName, "The name of product can't be empty or null.");
+            Validations.ValidateIfEmpty(Name, "The name of product can't be empty or null.");
             Validations.ValidateIfLessThan(Price,0, "The price of product can't be less than 0(Zero)");
             Validations.ValidateIfNull(CategoryId, "The category of product can't be null.");
         }
@@ -52,7 +54,7 @@ namespace RiseFood.Catalogo.Domain
 
         public void AddIngredients(string ingredient)
         {
-            IngredientsAdditionals.Add(ingredient);
+            _ingredientsAdditionals.Add(ingredient);
         }
     }
 }

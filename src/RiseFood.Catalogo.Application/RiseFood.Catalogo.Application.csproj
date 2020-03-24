@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Events" />
+      <Folder Include="Queries" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RiseFood.Catalogo.Domain\RiseFood.Catalogo.Domain.csproj" />
+      <ProjectReference Include="..\RiseFood.Core\RiseFood.Core.csproj" />
+    </ItemGroup>
+
+</Project>

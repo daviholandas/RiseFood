@@ -8,7 +8,7 @@ using RiseFood.Gestor.Application.Services;
 
 namespace RiseFood.App.WebApi.Controllers
 {
-    [Authorize]
+    
     [Route("api/[controller]")]
     public class SuppliesController : MainConttroller
     {
