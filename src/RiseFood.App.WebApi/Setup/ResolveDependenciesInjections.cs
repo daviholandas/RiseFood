@@ -7,7 +7,7 @@ using RiseFood.Gestor.Data;
 using RiseFood.Gestor.Data.Repositories;
 using RiseFood.Gestor.Domain;
 
-namespace RiseFood.App.WebAPi.Setup
+namespace RiseFood.App.WebApi.Setup
 {
     public static class ResolveDependenciesInjections
     {

@@ -10,7 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using RiseFood.App.WebAPi.Setup;
+using RiseFood.App.WebApi.Setup;
+
 
 namespace RiseFood.App.WebAPi
 {
@@ -28,6 +29,7 @@ namespace RiseFood.App.WebAPi
         {
             services.ResolveDependencies();
             services.ContextCollectionResolve(Configuration);
+            services.AddIdentityConfiguration();
             services.AddControllers();
         }
 
