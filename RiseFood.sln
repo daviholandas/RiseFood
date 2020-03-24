@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseFood.Gestor.Application
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{63E0CF50-58D4-11EA-9339-3DCA8EFBCA86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseFood.App.WebApi", "src\RiseFood.App.WebAPi\RiseFood.App.WebApi.csproj", "{91504127-0566-4AA8-B0F9-B04321B039A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseFood.App.WebApi", "src\RiseFood.App.WebApi\RiseFood.App.WebApi.csproj", "{91504127-0566-4AA8-B0F9-B04321B039A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

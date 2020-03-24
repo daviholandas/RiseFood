@@ -32,7 +32,9 @@ namespace RiseFood.Gestor.Data.Repositories
 
         public async Task<Supplie> GetSupplieByCode(string code)
         {
-            return await _gestorDbContext.Supplies.AsNoTracking().FirstOrDefaultAsync(s => s.Code == code);
+            return await _gestorDbContext.Supplies.AsNoTracking()
+            .Include(s => s.SupplieCategory)
+            .FirstOrDefaultAsync(s => s.Code == code);
         }
 
         public async Task<Supplie> GetSupplieById(int id)

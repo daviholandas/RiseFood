@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RiseFood.Core.Data;
-using RiseFood.Gestor.Data.Mappings;
 using RiseFood.Gestor.Domain;
 
 namespace RiseFood.Gestor.Data

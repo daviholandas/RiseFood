@@ -1,12 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RiseFood.Gestor.Application.DTOs;
 using RiseFood.Gestor.Application.Services;
 
 namespace RiseFood.App.WebApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class SuppliesController : MainConttroller
     {
@@ -35,6 +37,20 @@ namespace RiseFood.App.WebApi.Controllers
         public async Task<IEnumerable<SupplieDto>> GetSuppliesByCategories(string categoryCode)
         {
             return await _supplieService.GetSuppliesByCategory(categoryCode);
+        }
+
+        [HttpGet]
+        [Route("{code=string}")]
+        public async Task<ActionResult> GetSupplieByCode(string code)
+        {
+            
+            var supplie =  await _supplieService.GetSupplieByCode(code);
+
+            if(supplie == null)
+                return BadRequest("O produto não foi encontrado");
+            
+            return Ok(supplie);
+
         }
     }
 }
