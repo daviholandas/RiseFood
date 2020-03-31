@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
@@ -9,6 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RiseFood.Catalogo.Application\RiseFood.Catalogo.Application.csproj" />
+    <ProjectReference Include="..\RiseFood.Catalogo.Data\RiseFood.Catalogo.Data.csproj" />
     <ProjectReference Include="..\RiseFood.Gestor.Application\RiseFood.Gestor.Application.csproj" />
     <ProjectReference Include="..\RiseFood.Gestor.Data\RiseFood.Gestor.Data.csproj" />
     <ProjectReference Include="..\RiseFood.Gestor.Domain\RiseFood.Gestor.Domain.csproj" />

@@ -6,5 +6,6 @@ namespace RiseFood.Core.Mediator
     public interface IMediatorHandler
     {
         Task PublishEvent<T>(T occurrence) where T : Event;
+        Task SendCommand<T>(T command) where T : Command;
     }
 }

@@ -5,10 +5,10 @@ namespace RiseFood.Catalogo.Application.Commands
 {
     public class CreateCategoryCommand : Command
     {
-        public CreateCategoryCommand(string name, int code)
+        public CreateCategoryCommand(int code, string name)
         {
-            Name = name;
             Code = code;
+            Name = name;
         }
         private  CreateCategoryCommand(){}
         

@@ -10,24 +10,28 @@ namespace RiseFood.Catalogo.Application.Commands
 {
     public class CreateProductCommand : Command
     {
-        public CreateProductCommand(string name, decimal price, string description, HashSet<string>ingredientsAdditionals, Sizes size, Guid categoryId)
+        public CreateProductCommand(string name, decimal price, string description, HashSet<string>ingredientsAdditionals, Sizes size, DateTime createDate, Guid categoryId)
         {
             Name = name;
             Price = price;
             Description = description;
-            _ingredientsAdditionals = ingredientsAdditionals;
+            IngredientsAdditionals = ingredientsAdditionals;
             Size = size;
+            CreateDate = createDate;
             CategoryId = categoryId;
         }
         private  CreateProductCommand(){}
         
-        public string Name {get; private set;}
-        public decimal Price {get; private set;}
-        public string Description {get; private set;}
-        private readonly HashSet<string> _ingredientsAdditionals;
-        public Sizes Size {get; private set;}
-        public Guid CategoryId {get; private set;}
+        public int Code { get; set; }
+        public string Name {get; set;}
+        public decimal Price {get; set;}
+        public string Description {get; set;}
+        public  HashSet<string> IngredientsAdditionals { get; set; }
+        public Sizes Size {get; set;}
+        public DateTime CreateDate { get; set; }
+        public Guid CategoryId { get; set; }
         
+
 
         public override bool IsValid()
         {

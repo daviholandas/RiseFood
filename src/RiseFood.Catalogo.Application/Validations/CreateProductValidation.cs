@@ -8,6 +8,9 @@ namespace RiseFood.Catalogo.Application.Validations
     {
         public CreateProductValidation()
         {
+            RuleFor(p => p.Code)
+                .NotNull()
+                .WithMessage("The code of product can't null.");
             RuleFor(p => p.Name)
                 .NotEmpty()
                 .WithMessage("The name of product can't empty.");

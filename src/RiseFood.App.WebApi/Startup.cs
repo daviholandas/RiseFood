@@ -30,6 +30,7 @@ namespace RiseFood.App.WebAPi
             services.ResolveDependencies();
             services.ContextCollectionResolve(Configuration);
             services.AddIdentityConfiguration();
+            services.AddMongoMappers();
             services.AddControllers();
         }
 

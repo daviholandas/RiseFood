@@ -17,5 +17,10 @@ namespace RiseFood.Core.Mediator
         {
            await _mediator.Publish(occurrence);
         }
+
+        public async Task SendCommand<T>(T command) where T : Command
+        {
+            await _mediator.Send(command);
+        }
     }
 }
