@@ -1,8 +1,9 @@
 using System.Threading.Tasks;
 using MediatR;
 using RiseFood.Core.Messages;
+using RiseFood.Core.Messages.CommonMessages.Notifications;
 
-namespace RiseFood.Core.Mediator
+namespace RiseFood.Core.Communication.Mediator
 {
     public class MediatorHandler : IMediatorHandler
     {
@@ -21,6 +22,11 @@ namespace RiseFood.Core.Mediator
         public async Task SendCommand<T>(T command) where T : Command
         {
             await _mediator.Send(command);
+        }
+
+        public async Task PublishDomainNotification<T>(T notification) where T : DomainNotification
+        {
+            await _mediator.Publish(notification);
         }
     }
 }

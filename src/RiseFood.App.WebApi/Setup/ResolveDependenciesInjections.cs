@@ -4,10 +4,12 @@ using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using RiseFood.App.WebAPi;
 using RiseFood.Catalogo.Application.AutoMapper;
+using RiseFood.Catalogo.Application.Commands;
 using RiseFood.Catalogo.Data;
 using RiseFood.Catalogo.Data.Repositories;
 using RiseFood.Catalogo.Domain;
-using RiseFood.Core.Mediator;
+using RiseFood.Core.Communication.Mediator;
+using RiseFood.Core.Messages.CommonMessages.Notifications;
 using RiseFood.Gestor.Application.AutoMapper;
 using RiseFood.Gestor.Application.Services;
 using RiseFood.Gestor.Data;
@@ -23,6 +25,9 @@ namespace RiseFood.App.WebApi.Setup
             //Mediator
             services.AddMediatR(typeof(Startup));
             services.AddScoped<IMediatorHandler, MediatorHandler>();
+
+            //Notification
+            services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
             
             //AutoMapper
             services.AddAutoMapper(
@@ -40,6 +45,8 @@ namespace RiseFood.App.WebApi.Setup
             //Catalogo Domain
             services.AddScoped<MongoContext>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IRequestHandler<CreateProductCommand, bool>, ProductCommandHandler>();
+            services.AddScoped<IRequestHandler<CreateCategoryCommand, bool>, ProductCommandHandler>();
             
             return services;
         }

@@ -15,6 +15,7 @@ namespace RiseFood.Catalogo.Application.Validations
                 .NotEmpty()
                 .WithMessage("The name of product can't empty.");
             RuleFor(p => p.Price)
+                .Cascade(CascadeMode.Continue)
                 .NotNull()
                 .WithMessage("The price of product can't be null.")
                 .LessThanOrEqualTo(0)

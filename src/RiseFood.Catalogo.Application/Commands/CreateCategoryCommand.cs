@@ -12,8 +12,8 @@ namespace RiseFood.Catalogo.Application.Commands
         }
         private  CreateCategoryCommand(){}
         
-        public string Name {get; private set;}
-        public int Code {get; private set;}
+        public string Name {get; set;}
+        public int Code {get; set;}
 
         public override bool IsValid()
         {

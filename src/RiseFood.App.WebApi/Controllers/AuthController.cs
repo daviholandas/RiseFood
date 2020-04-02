@@ -6,7 +6,8 @@ using RiseFood.App.WebAPi.DTO;
 namespace RiseFood.App.WebApi.Controllers
 {
     [Route("api/[controller]")]
-    public class AuthController : MainConttroller
+    [ApiController]
+    public class AuthController : ControllerBase
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;

@@ -10,7 +10,8 @@ namespace RiseFood.App.WebApi.Controllers
 {
     
     [Route("api/[controller]")]
-    public class SuppliesController : MainConttroller
+    [ApiController]
+    public class SuppliesController : ControllerBase
     {
         private readonly ISupplieAppService _supplieService;
 

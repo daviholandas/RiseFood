@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using RiseFood.Catalogo.Domain;
 using RiseFood.Core.Data;
+using System.Linq;
 
 namespace RiseFood.Catalogo.Data.Repositories
 {
@@ -67,7 +68,7 @@ namespace RiseFood.Catalogo.Data.Repositories
 
         public void SaveCategory(Category category)
         {
-            throw new NotImplementedException();
+            _context.AddCommand(() => _categories.InsertOneAsync(category));
         }
 
         public void UpdateCategory(Category category)
@@ -80,9 +81,10 @@ namespace RiseFood.Catalogo.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Category>> GetAllCategories()
+        public async  Task<IEnumerable<Category>> GetAllCategories()
         {
-            throw new NotImplementedException();
+            var categories = await _categories.FindAsync(category => true);
+            return categories.ToList();
         }
 
         public Task<IEnumerable<Product>> GetProductsByCategory(Guid categoryId)
@@ -102,7 +104,7 @@ namespace RiseFood.Catalogo.Data.Repositories
         
         public void Dispose()
         {
-            throw new NotImplementedException();
+           
         }
     }
 }
