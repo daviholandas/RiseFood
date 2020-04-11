@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_RiseFood.18682575.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Applications" t="Include" />
+      <e p="Contexts" t="Include">
+        <e p="Core" t="Include" />
+        <e p="ProductList" t="Include" />
+      </e>
+      <e p="Infra" t="Include" />
+      <e p="RiseFood.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="src/RiseFood.Core" t="IncludeRecursive">
+        <e p="Data" t="Include">
+          <e p="IRepository.cs" t="Include" />
+          <e p="IUnitOfWork.cs" t="Include" />
+        </e>
+        <e p="DomainObjects" t="Include">
+          <e p="DomainException.cs" t="Include" />
+          <e p="Entity.cs" t="Include" />
+          <e p="IAggregateRoot.cs" t="Include" />
+          <e p="Validations.cs" t="Include" />
+        </e>
+        <e p="RiseFood.Core.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="RiseFood.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="src/RiseFood.IoC" t="IncludeRecursive">
+        <e p="EntitiesMappersResolve.cs" t="Include" />
+        <e p="RiseFood.IoC.csproj" t="IncludeRecursive" />
+        <e p="RiseFoodIoCResolve.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="RiseFood.IoC.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="src/RiseFood.ProductList.AntiCorruption" t="IncludeRecursive">
+        <e p="AutoMapper" t="Include">
+          <e p="InsumoToSupplyAutoMapperProfile.cs" t="Include" />
+        </e>
+        <e p="ISuppliesService.cs" t="Include" />
+        <e p="Insumos.cs" t="Include" />
+        <e p="RiseFood.ProductList.AntiCorruption.csproj" t="IncludeRecursive" />
+        <e p="SuppliesService.cs" t="Include" />
+        <e p="SuppliesServiceFacade.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="RiseFood.ProductList.AntiCorruption.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="src/RiseFood.ProductList.Application" t="IncludeRecursive">
+        <e p="DTOs" t="Include">
+          <e p="ProductDTO.cs" t="Include" />
+          <e p="Supply.cs" t="Include" />
+        </e>
+        <e p="ISuppliesServiceFacade.cs" t="Include" />
+        <e p="RiseFood.ProductList.Application.csproj" t="IncludeRecursive" />
+        <e p="Services" t="Include">
+          <e p="IListSuppliesService.cs" t="Include" />
+          <e p="ListSuppliesService.cs" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="RiseFood.ProductList.Application.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="src/RiseFood.ProductList.Data" t="IncludeRecursive">
+        <e p="Mappers" t="Include">
+          <e p="CategoryMapping.cs" t="Include" />
+          <e p="ProductMapping.cs" t="Include" />
+        </e>
+        <e p="ProductListContextMongo.cs" t="Include" />
+        <e p="Repositories" t="Include">
+          <e p="ProductListRepository.cs" t="Include" />
+        </e>
+        <e p="RiseFood.ProductList.Data.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="RiseFood.ProductList.Data.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="src/RiseFood.ProductList.Domain" t="IncludeRecursive">
+        <e p="Category.cs" t="Include" />
+        <e p="IProductListRepository.cs" t="Include" />
+        <e p="Product.cs" t="Include" />
+        <e p="RiseFood.ProductList.Domain.csproj" t="IncludeRecursive" />
+        <e p="Size.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="RiseFood.ProductList.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="src/RiseFood.WebApi" t="IncludeRecursive">
+        <e p="Controllers" t="Include">
+          <e p="MainController.cs" t="Include" />
+          <e p="ProductsController.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="RiseFood.WebApi.csproj" t="IncludeRecursive" />
+        <e p="Startup.cs" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="mono_crash.mem.1130.1.blob" t="Include" />
+        <e p="mono_crash.mem.29561.1.blob" t="Include" />
+        <e p="mono_crash.mem.32583.1.blob" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="RiseFood.WebApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+    </e>
+  </component>
+</project>
