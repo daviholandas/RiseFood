@@ -19,7 +19,8 @@ namespace RiseFood.ProductList.AntiCorruption
         
         public async Task<IEnumerable<InputProductDto>> ListInputProducts()
         {
-            return _mapper.Map<IEnumerable<InputProductDto>>( await _suppliesService.GetAllSupplies());
+            var supplies = await _suppliesService.GetAllSupplies();
+            return _mapper.Map<IEnumerable<InputProductDto>>(supplies);
         }
 
         public async Task<IEnumerable<InputProductDto>> ListInputProductsByCategory(string categoryName)

@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseFood.WebApi", "src\Rise
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseFood.ProductList.Data", "src\RiseFood.ProductList.Data\RiseFood.ProductList.Data.csproj", "{E8D704C0-9EFD-46B0-98D7-BF901D278D42}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B8BC7860-09A5-431D-AFCE-26FD3E003E13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiseFood.ProductList.AntiCorruptionTest", "tests\RiseFood.ProductList.AntiCorruptionTest\RiseFood.ProductList.AntiCorruptionTest.csproj", "{78A9E840-6580-4765-8C45-CCD45C89417B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,7 @@ Global
 		{3AA3E6B8-8BA6-479E-88B6-D14FABFE4043} = {B42EC0CA-232D-44F2-AB83-12D2A35A2BE1}
 		{CFD4D2BD-B57B-4A20-A3C8-1824F2172306} = {7CE0FDD4-307C-4134-969E-16EA923B0FF6}
 		{E8D704C0-9EFD-46B0-98D7-BF901D278D42} = {B42EC0CA-232D-44F2-AB83-12D2A35A2BE1}
+		{78A9E840-6580-4765-8C45-CCD45C89417B} = {B8BC7860-09A5-431D-AFCE-26FD3E003E13}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{35CBF9EF-8373-4472-9DBF-1AFB4F364552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -69,5 +74,9 @@ Global
 		{E8D704C0-9EFD-46B0-98D7-BF901D278D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8D704C0-9EFD-46B0-98D7-BF901D278D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8D704C0-9EFD-46B0-98D7-BF901D278D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A9E840-6580-4765-8C45-CCD45C89417B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A9E840-6580-4765-8C45-CCD45C89417B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A9E840-6580-4765-8C45-CCD45C89417B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A9E840-6580-4765-8C45-CCD45C89417B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
