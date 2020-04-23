@@ -17,17 +17,17 @@ namespace RiseFood.ProductList.AntiCorruption
             _suppliesService = suppliesService;
         }
         
-        public async Task<IEnumerable<Supply>> ListSupplies()
+        public async Task<IEnumerable<InputProductDto>> ListInputProducts()
         {
-            return _mapper.Map<IEnumerable<Supply>>( await _suppliesService.GetAllInsumos());
+            return _mapper.Map<IEnumerable<InputProductDto>>( await _suppliesService.GetAllSupplies());
         }
 
-        public async Task<IEnumerable<Supply>> ListSuppliesByCategory(string categoryName)
+        public async Task<IEnumerable<InputProductDto>> ListInputProductsByCategory(string categoryName)
         {
-            return _mapper.Map<IEnumerable<Supply>>(await _suppliesService.GetAllInsumosByCategory(categoryName));
+            return _mapper.Map<IEnumerable<InputProductDto>>(await _suppliesService.GetAllSuppliesByCategory(categoryName));
         }
 
-        public async Task<IEnumerable<object>> ListSuppliesCategories()
+        public async Task<IEnumerable<object>> ListInputProductsCategories()
         {
             return await _suppliesService.ListCategories();
         }

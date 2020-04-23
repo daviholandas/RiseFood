@@ -12,7 +12,7 @@ namespace RiseFood.ProductList.Data.Mappers
                 map.AutoMap();
                 map.MapMember(p => p.Name).SetIsRequired(true);
                 map.MapMember(p => p.Code).SetIsRequired(true);
-                map.MapCreator(p=> new Product(p.Code, p.Name, p.Price, p.Description, p.Size, p.Category, p.Additionals));
+                map.MapCreator(p=> new Product(p.Code, p.Name, p.Price, p.Description, p.Size, p.Category, p.AdditionalProducts));
             });
         }
     }

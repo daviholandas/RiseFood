@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_RiseFood.18682575.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_RiseFood.-1176126088.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Applications" t="Include" />
       <e p="Contexts" t="Include">
@@ -48,13 +48,13 @@
       </e>
       <e p="src/RiseFood.ProductList.AntiCorruption" t="IncludeRecursive">
         <e p="AutoMapper" t="Include">
-          <e p="InsumoToSupplyAutoMapperProfile.cs" t="Include" />
+          <e p="SupplyToInputProductAutoMapperProfile.cs" t="Include" />
         </e>
         <e p="ISuppliesService.cs" t="Include" />
-        <e p="Insumos.cs" t="Include" />
         <e p="RiseFood.ProductList.AntiCorruption.csproj" t="IncludeRecursive" />
         <e p="SuppliesService.cs" t="Include" />
         <e p="SuppliesServiceFacade.cs" t="Include" />
+        <e p="Supply.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -66,14 +66,14 @@
       </e>
       <e p="src/RiseFood.ProductList.Application" t="IncludeRecursive">
         <e p="DTOs" t="Include">
-          <e p="ProductDTO.cs" t="Include" />
-          <e p="Supply.cs" t="Include" />
+          <e p="InputProductDto.cs" t="Include" />
+          <e p="ProductDto.cs" t="Include" />
         </e>
         <e p="ISuppliesServiceFacade.cs" t="Include" />
         <e p="RiseFood.ProductList.Application.csproj" t="IncludeRecursive" />
         <e p="Services" t="Include">
-          <e p="IListSuppliesService.cs" t="Include" />
-          <e p="ListSuppliesService.cs" t="Include" />
+          <e p="IListInputProductService.cs" t="Include" />
+          <e p="ListInputProductService.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">

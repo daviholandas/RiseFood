@@ -2,7 +2,7 @@ using RiseFood.Core.DomainObjects;
 
 namespace RiseFood.ProductList.Domain
 {
-    public class Supply
+    public class InputProductDto
     {
         public string Code { get; set; }
         public string Name { get; set; }

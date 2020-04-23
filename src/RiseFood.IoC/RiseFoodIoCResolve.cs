@@ -2,8 +2,8 @@ using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RiseFood.ProductList.AntiCorruption;
+using RiseFood.ProductList.AntiCorruption.AutoMapper;
 using RiseFood.ProductList.Application;
-using RiseFood.ProductList.Application.AutoMapper;
 using RiseFood.ProductList.Application.Services;
 using RiseFood.ProductList.Data;
 using RiseFood.ProductList.Data.Repositories;
@@ -20,12 +20,12 @@ namespace RiseFood.IoC
             
             //AutoMapper
             services.AddAutoMapper(
-                typeof(InsumoToSupplyAutoMapperProfile)
+                typeof(SupplyToInputProductAutoMapperProfile)
             );
             
             //ListProducts
             services.AddScoped<ISuppliesServiceFacade, SuppliesServiceFacade>();
-            services.AddScoped<IListSuppliesService, ListSuppliesService>();
+            services.AddScoped<IListInputProductService, ListInputProductService>();
             services.AddSingleton<ProductListContextMongo>();
             services.AddScoped<IProductListRepository, ProductListRepository>();
             

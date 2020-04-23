@@ -6,8 +6,8 @@ namespace RiseFood.ProductList.Application
 {
     public interface ISuppliesServiceFacade
     {
-        Task<IEnumerable<Supply>> ListSupplies();
-        Task<IEnumerable<Supply>> ListSuppliesByCategory(string categoryName);
-        Task<IEnumerable<object>> ListSuppliesCategories();
+        Task<IEnumerable<InputProductDto>> ListInputProducts();
+        Task<IEnumerable<InputProductDto>> ListInputProductsByCategory(string categoryName);
+        Task<IEnumerable<object>> ListInputProductsCategories();
     }
 }

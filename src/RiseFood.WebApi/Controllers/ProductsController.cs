@@ -9,26 +9,26 @@ namespace RiseFood.WebApi.Controllers
     [Route("api/[controller]")]
     public class ProductsController : MainController
     {
-        private readonly IListSuppliesService _listSuppliesService;
+        private readonly IListInputProductService _listInputProductService;
 
-        public ProductsController(IListSuppliesService listSuppliesService)
+        public ProductsController(IListInputProductService listInputProductsService)
         {
-            _listSuppliesService = listSuppliesService;
+            _listInputProductService = listInputProductsService;
         }
         
         [Route("supplies/categories")]
         [HttpGet]
         public async Task<IEnumerable<object>> ListCategoriesSupplies()
         {
-            return await _listSuppliesService.ListInsumosCategories();
+            return await _listInputProductService.ListInputProductCategories();
         }
 
         [Route("supplies")]
         [HttpGet]
-        public async Task<IEnumerable<Supply>> ListAllSupplies() => await _listSuppliesService.ListSupplies();
+        public async Task<IEnumerable<InputProductDto>> ListAllSupplies() => await _listInputProductService.ListInputProducts();
 
         [HttpGet("supplies/{category=string}")]
-        public async Task<IEnumerable<Supply>> ListAllSuppliesByCategory(string category) =>
-            await _listSuppliesService.ListSuppliesByInsumoCategory(category);
+        public async Task<IEnumerable<InputProductDto>> ListAllSuppliesByCategory(string category) =>
+            await _listInputProductService.ListInputProductsBySupplyCategory(category);
     }
 }

@@ -5,13 +5,14 @@ using MongoDB.Bson.Serialization.IdGenerators;
 
 namespace RiseFood.ProductList.AntiCorruption
 {
-    public class Insumos
+    public class Supply
     {
         [BsonRepresentation(BsonType.ObjectId)]
-        public string _id { get; set; }
+        public string Id { get; set; }
         public string Code { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public string Category { get; set; } 
+        public string Category { get; set; }
+        public string CategoryCode { get; set; }
     }
 }

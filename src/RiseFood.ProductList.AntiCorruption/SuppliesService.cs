@@ -8,30 +8,30 @@ namespace RiseFood.ProductList.AntiCorruption
 {
     public class SuppliesService : ISuppliesService
     {
-        private readonly IMongoCollection<Insumos> _insumos;
+        private readonly IMongoCollection<Supply> _supplies;
 
         public SuppliesService(string connectionString, string database)
         {
             var client = new MongoClient(connectionString).GetDatabase(database);
-            _insumos = client.GetCollection<Insumos>("supplies");
+            _supplies = client.GetCollection<Supply>("supplies");
         }
         
-        public async Task<IEnumerable<Insumos>> GetAllInsumos()
+        public async Task<IEnumerable<Supply>> GetAllSupplies()
         {
-            var insumos = await _insumos.FindSync(i => true).ToListAsync();
-            return insumos;
+            var supplies = await _supplies.FindSync(i => true).ToListAsync();
+            return supplies;
         }
 
-        public async Task<IEnumerable<Insumos>> GetAllInsumosByCategory(string categoryName)
+        public async Task<IEnumerable<Supply>> GetAllSuppliesByCategory(string categoryName)
         {
             var filter = new BsonDocument("Category", new Regex(categoryName, RegexOptions.IgnoreCase));
-            var insumos = await _insumos.FindSync(filter).ToListAsync();
-            return insumos;
+            var supplies = await _supplies.FindSync(filter).ToListAsync();
+            return supplies;
         }
 
         public async Task<IEnumerable<object>> ListCategories()
         {
-            return await _insumos.Aggregate()
+            return await _supplies.Aggregate()
                 .Group(i => i.Category, g => new {Category = g.Key})
                 .ToListAsync();
         }

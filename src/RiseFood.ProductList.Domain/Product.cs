@@ -5,28 +5,28 @@ namespace RiseFood.ProductList.Domain
 {
     public class Product : Entity, IAggregateRoot
     {
-        public Product(int code, string name, decimal price, string description, Size size, Category category, HashSet<string> additionals)
+        public Product(string code, string name, decimal price, string description, Size? size, Category category, HashSet<string> additionalProducts)
         {
             Code = code;
             Name = name;
             Price = price;
             Description = description;
-            Size = size;
+            Size = size ?? Size.Standard;
             Category = category;
-            Additionals = additionals;
+            AdditionalProducts = additionalProducts ?? new HashSet<string>();
         }
         
-        public int Code { get; private set; }
+        public string Code { get; private set; }
         public string Name  { get; private set; }
         public decimal Price { get; private set; }
         public string Description { get; private set; }
         public Size Size { get; private set; }
         public Category Category { get; private set; }
-        public HashSet<string> Additionals { get; private set; }
+        public HashSet<string> AdditionalProducts { get; private set; }
 
-        public void AddAdditionals(string additional)
+        public void AddAdditionalProducts(string additional)
         {
-            Additionals.Add(additional);
+            AdditionalProducts.Add(additional);
         }
 
         public void ChangeSize(Size size)
@@ -37,7 +37,7 @@ namespace RiseFood.ProductList.Domain
         public override void Validate()
         {
             Validations.ValidateIfEmpty(Name, "The name can't be empty or null");
-            Validations.ValidateIfNull(Code, "The code can't be null.");
+            Validations.ValidateIfEmpty(Code, "The code can't be null.");
             Validations.ValidateIfNull(Category, "The category can't be null.");
         }
     }

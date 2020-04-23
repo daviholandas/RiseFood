@@ -1,14 +1,13 @@
 using AutoMapper;
-using RiseFood.ProductList.AntiCorruption;
 using RiseFood.ProductList.Domain;
 
-namespace RiseFood.ProductList.Application.AutoMapper
+namespace RiseFood.ProductList.AntiCorruption.AutoMapper
 {
-    public class InsumoToSupplyAutoMapperProfile : Profile
+    public class SupplyToInputProductAutoMapperProfile : Profile
     {
-        public InsumoToSupplyAutoMapperProfile()
+        public SupplyToInputProductAutoMapperProfile()
         {
-            CreateMap<Insumos, Supply>().ReverseMap();
+            CreateMap<Supply, InputProductDto>().ReverseMap();
         }
     }                                                                                                                                                                                          
 }
